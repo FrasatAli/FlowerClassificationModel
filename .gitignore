@@ -1,0 +1,41 @@
+# Ignore the Virtual environment
+venv/
+.env/
+
+# Ignore the entire data folder (datasets, downloaded images, etc.)
+data/flowers_kaggle/dataset/
+
+# Ignore all model checkpoints (they're large and can be re-trained or downloaded)
+# Saved models
+saved_models/
+*.pth
+*.pt
+
+# Ignore logs (they grow and are not needed in repo)
+
+
+# Ignore generated evaluation plots
+evaluation/*.png
+evaluation/*.jpg
+
+# Ignore temp files created during inference/API
+temp/
+*.tmp
+
+# Python / system junk
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.venv/
+venv/
+*.egg
+
+# macOS junk
+.DS_Store
+
+# Optional: Jupyter notebooks (if you used any for exploration)
+.ipynb_checkpoints/
+*.ipynb_checkpoints/

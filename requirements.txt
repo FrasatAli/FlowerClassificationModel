@@ -1,0 +1,16 @@
+torch
+torchvision
+scikit-learn
+matplotlib
+fastapi
+uvicorn
+pillow
+kaggle
+FastAPI
+os
+logging
+uvicorn
+JSONResponse
+shutil
+Counter
+matplotlib.pyplot
