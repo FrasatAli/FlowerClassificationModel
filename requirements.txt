@@ -6,11 +6,5 @@ fastapi
 uvicorn
 pillow
 kaggle
-FastAPI
-os
-logging
-uvicorn
-JSONResponse
-shutil
-Counter
-matplotlib.pyplot
+tqdm
+numpy
