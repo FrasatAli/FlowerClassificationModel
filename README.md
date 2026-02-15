@@ -1,7 +1,7 @@
  **Computer Vision Focus – Image Classification on Oxford Flowers-102**
 
 **GitHub Repository**: https://github.com/FrasatAli/FlowerClassificationModel.git
-**Submitted by**: Frasat  
+**Submitted by**: Frasat Ali
 **Date**: February 2026
 
 ## Overview & Task Summary
@@ -127,25 +127,51 @@ image_classification_assessment/
 **How to run**
 ## Setup Instructions – How to Run After Cloning
 1. **Clone the repository**
-   ```bash
+```bash
    git clone https://github.com/FrasatAli/FlowerClassificationModel.git
    cd FlowerClassificationModel
+```
 2. **Commands**
+```bash
     python -m venv venv
     source venv/bin/activate   # Windows: venv\Scripts\activate
     pip install -r requirements.txt
+```
 3. **Download trained models (ignored in Git – large files)**
 - Remove cache
-    cmd: find . -name "__pycache__" -type d -exec rm -rf {} +
+```bash
+        find . -name "__pycache__" -type d -exec rm -rf {} +
+```
 - Download 102Flower using kaggle
-    cmd: kaggle datasets download -d nunenuh/pytorch-challange-flower-dataset -p data/flowers_kaggle --unzip
+```bash
+        kaggle datasets download -d nunenuh/pytorch-challange-flower-dataset -p data/flowers_kaggle --unzip
+```
 4. **Run Data Preperation and evaluation**
+```bash
     python -m data.flower_data
     python -m evaluation.evaluate
+```
 
+
+## Test single prediction
 ```bash
-# Test single prediction
 python predict/predict.py
+```
 
-# Start API
+## Start API
+```bash
 uvicorn app:app --reload
+```
+
+**Final Note – If additional compute were available**
+1. How you would scale training:
+- Increase epochs to 30–50
+- Larger batch size ('64–128') with gradient accumulation
+- Multi-GPU or distributed training (torch.distributed)
+- Mixed precision ('AMP') for faster training
+
+2. What model or data improvements you would explore:
+- Models: EfficientNet-B0/B3/B4, ViT-B/16, ConvNeXt, ensemble of multiple fine-tuned backbones
+- Data: stronger augmentation ('AutoAugment', 'RandAugment', 'CutMix', 'MixUp'), synthetic data ('GANs'), external flower datasets, test-time augmentation ('TTA')
+- Loss: Focal loss or class-balanced loss for imbalance
+- Hyperparameter tuning: Optuna or Ray Tune
