@@ -1,7 +1,7 @@
  **Computer Vision Focus – Image Classification on Oxford Flowers-102**
 
 **GitHub Repository**: https://github.com/FrasatAli/FlowerClassificationModel.git
-**Submitted by**: Frasat Ali
+**Developed by**: Frasat Ali
 **Date**: February 2026
 
 ## Overview & Task Summary
